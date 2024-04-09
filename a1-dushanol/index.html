@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lora Dushanova</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Lora Dushanova</h1>
+    <h2>Web Dev Concepts</h2>
+
+    <p> For this assignment, I used VS Code's HTML boilerplate to draft my website. The client 
+        I used is Firefox on Linux.</p>
+    
+    <p> Accessing the website from my local computer, I must include the index.html 
+        resource in order to view the homepage.
+        Without specifying the resource "/index.html", I would simply view the directory 
+        of the file. 
+        In Firefox's Inspector under Network, there is one GET request to an HTML 
+        document; the status code is 200.
+
+    
+    <p> I do not need to include index.html as a resource when accessing the website via the 
+        server, because the file is already the <strong>designated homepage</strong> of a web 
+        server. This file, stored in the root directory, is fetched with a <strong>GET</strong> 
+        request.</p>
+        Firefox's Inspector shows a <strong>status code</strong> 200.
+        This status code means that the request to the server to render the page in the 
+        client was successful. The data received is the HTML (text) of my file.</p>
+    
+    
+    <p> There are four GET requests; only two (for the homepage and the favicon paths) are successful. 
+        The other two GET requests, to the <strong>JavaScript</strong> and <strong>CSS</strong> main 
+        files, are unsuccessful because these files do not exist. Thus, the 404 status code.
+        The favicon.ico request is successful, even though I did not create such a file. The response 
+        header shows the request has been <strong>cached</strong> by the <strong>DNS</strong>. This 
+        is likely why the status code is 200, even though no such file exists in the public_html folder 
+        on the server, either.</p>
+    
+    <p> The URL for my website is "https://web.engr.oregonstate.edu/~dushanol/a1-dushanol/index.html".
+        The <strong>protocol</strong> is "HTTPS" or encrypted HTTP. There are two 
+        <strong>subdomains</strong>, "web" and "engr". The <strong>domain</strong> is 
+        "oregonstate.edu". The <strong>path to the resource</strong> is 
+        "~dushanol/a1-dushanol". And finally, the <strong>resource</strong> is "index.html" 
+        or the homepage.</p>
+</body>
+</html>
