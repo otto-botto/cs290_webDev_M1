@@ -31,30 +31,30 @@
                         <h4>Local Access</h4>
                             <p> Accessing the website from a local computer must include the index.html 
                                 resource in order to view the homepage.
-                                Not specifying the resource "/index.html" would result in 
-                                viwing the directory of the file. 
+                                Not specifying the resource "/index.html" brings up the directory of the file. 
                                 In Firefox's Inspector under Network, there is one GET request to an HTML 
                                 document; the status code is 200.
                 
                         <h4>Server Access</h4>
-                            <p> Server access does not need to include index.html as a resource. The reason is that 
+                            <p> Server access need not include the index.html resource because 
                                 the file is already the <strong>designated homepage</strong> of the web 
                                 server. This file, stored in the root directory, is fetched with a <strong>GET</strong> 
                                 request.</p>
-                                Firefox's Inspector shows a <strong>status code</strong> 200.
+                                The Inspector shows a <strong>status code</strong> 200.
                                 This status code means that the request to the server to render the page in the 
-                                client was successful. The data received is the HTML (text) of my file.</p>
+                                client was successful. The data received is the HTML (text) of the file.</p>
                             
                             
-                            <p> There are four GET requests; only two (for the homepage and the favicon paths) are successful. 
+                            <p> There are four GET requests; only two paths (homepage and favicon) are successful. 
                                 The other two GET requests, to the <strong>JavaScript</strong> and <strong>CSS</strong> main 
-                                files, are unsuccessful because these files do not exist. Thus, the 404 status code.
-                                The favicon.ico request is successful, even though I did not create such a file. The response 
-                                header shows the request has been <strong>cached</strong> by the <strong>DNS</strong>. This 
-                                is likely why the status code is 200, even though no such file exists in the public_html folder 
-                                on the server, either.</p>
+                                files, are unsuccessful (status code 404) because these files do not exist.
+                                The favicon.ico request is successful. The response 
+                                header shows the request has been <strong>cached</strong> by the <strong>DNS</strong>. 
+                                Due to the cache, 
+                                the status code is 200, even though no such file exists in the public_html folder 
+                                on the server.</p>
                         <h4>URL</h4>
-                            <p> The URL for this website is "https://web.engr.oregonstate.edu/~dushanol/a1-dushanol/index.html".
+                            <p> The homepage URL is "https://web.engr.oregonstate.edu/~dushanol/a1-dushanol/index.html".
                                 The <strong>protocol</strong> is "HTTPS" or encrypted HTTP. There are two 
                                 <strong>subdomains</strong>, "web" and "engr". The <strong>domain</strong> is 
                                 "oregonstate.edu". The <strong>path to the resource</strong> is 
