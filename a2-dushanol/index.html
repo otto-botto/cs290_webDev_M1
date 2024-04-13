@@ -10,13 +10,15 @@
     <script src='main.js'></script>
 </head>
 <body>
+    
     <header>
         <h1>Lora Dushanova</h1>
     </header>
+    
     <main>
         <section>
             <h2>Web Dev Concepts</h2>
-                <article>
+                <article id="Web Servers">
                     <h3>Web Servers</h3>
                         <h4>Client</h4>
                             <p> Starting point for this websute is VS Code's HTML boilerplate.  
@@ -53,6 +55,8 @@
                                 "oregonstate.edu". The <strong>path to the resource</strong> is 
                                 "~dushanol/a1-dushanol". And finally, the <strong>resource</strong> is "index.html" 
                                 or the homepage.</p>
+                </article>
+                <article id="Frontend Design">
                     <h3>Frontend Design</h3>
                         <h4>What is Frontend Design</h4>
                             <p>Frontend design focuses on the interaction with the user. Often referred to as User Interface
@@ -87,16 +91,28 @@
                                             search engines access and use the page's structure.</li>
                                         <li>&lt;footer&gt; is below the &lt;/main&gt; tag and contains legal and contact information.</li>
                                     </ul>    
+                        <h4>Anchors</h4>
+                            <p><strong>Hyperlinks</strong> from one item to another can be created using &lt;a&gt; the anchor element.
+                                This element can hyperlinks to:
+                            </p>
+                                <ol>
+                                    <li>Internal content using IDs <q>&lt;article id="Web Servers"&gt;Web Servers/article>&gt;</q>, 
+                                        which results in <article id="Web Servers"></article> <a href="#Web Servers">Web Servers</a></li>
+                                    <li>External content using <q>&lt;a href="https://github.com/"&gt;GitHub&lt;/a&gt;</q>, which results in
+                                    <a href="https://github.com/">GitHub</a></li>
+                                    <li>Page-to-page sing &lt;nav&gt; and &lt;a&gt; before the &lt;header&gt;, which with a css file 
+                                        creates buttons to other pages.</li>
+                                </ol>
                 </article>
 
-
-
-
         </section>
+    
     </main>
+    
     <footer>
         <p> &copy 2024 Lora Dushanova</p>
     </footer>
     
 </body>
+
 </html>
