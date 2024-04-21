@@ -8,9 +8,15 @@
     <meta name="robots" content="noindex,noarchive, nofollow" />
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/home/lora/git_cs290/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/home/lora/git_cs290/android-chrome-512x512.png"> 
+    <link rel="icon" type="image/png" sizes="192x192" href="/home/lora/git_cs290/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/home/lora/git_cs290/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/home/lora/git_cs290/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
+
 <body>
-    
     <header>
         <h1>Lora Dushanova</h1>
     </header>
@@ -18,12 +24,20 @@
     <nav>  
         <a href="index.html">Home</a>
         <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
     </nav>
     
     <main>
         <section>
             <h2>Web Dev Concepts</h2>
-                <article id="Web Servers">
+
+            <nav class = "local">  
+                <article id="webServers"></article> <a href="#webServers">Web Servers</a>
+                <article id="frontendDesign"></article> <a href="#frontendDesign">Frontend Design</a>
+                <article id="optimizingImages"></article> <a href="#optimizingImages">Optimizing Images</a>
+            </nav>
+
+                <article id="webServers">
                     <h3>Web Servers</h3>
                         <h4>Client</h4>
                             <p> The starting point for this website is VS Code's HTML boilerplate.  
@@ -61,7 +75,7 @@
                                 "~dushanol/a1-dushanol". And finally, the <strong>resource</strong> is "index.html" 
                                 or the homepage.</p>
                 </article>
-                <article id="Frontend Design">
+                <article id="frontendDesign">
                     <h3>Frontend Design</h3>
                         <h4>What is Frontend Design</h4>
                             <p>Frontend design focuses on the interaction with the user. Often referred to as User Interface
@@ -102,12 +116,78 @@
                             </p>
                                 <ol>
                                     <li>Internal content using IDs <q>&lt;article id="Web Servers"&gt;Web Servers/article>&gt;</q>, 
-                                        which results in <article id="Web Servers"></article> <a href="#Web Servers">Web Servers</a></li>
+                                        which results in <article id="webServers"></article> <a href="#webServers">Web Servers</a></li>
                                     <li>External content using <q>&lt;a href="https://github.com/"&gt;GitHub&lt;/a&gt;</q>, which results in
                                     <a href="https://github.com/">GitHub</a></li>
                                     <li>Page-to-page sing &lt;nav&gt; and &lt;a&gt; before the &lt;header&gt;, which with a css file 
                                         creates buttons to other pages.</li>
                                 </ol>
+                </article>
+
+                <article id="optimizingImages">
+                    <h3>Optimizing Images</h3>
+                        <p> Image optimization is a common practice in web development. Optimization
+                        reduces load time for images in the browser and conserves server space.
+                        There are six main optimization specifications: descriptive file naming, 
+                        small file size, reducing dimensions, ensuring a correct file format,
+                        reducing the image resolution, and choosing an appropriate color mode.</p>
+                        
+                        <h4>Descriptive File Naming</h4>
+                            <p> Ideally, the name of the image file will include who, what, where,
+                                and when. Such titles improve search engine optimization, so search
+                                engine bots can categorize properly a given image on the web.</p>
+                        <h4>Small File Size</h4>
+                            <p> The smaller the image file size, the faster it will load. Known as 
+                                <strong>compression</strong>, removing some of the data image via 
+                                approximations, in turn reduces the file size. Such compression, 
+                                however, may result in pixelation and is known as <strong>lossy</strong> 
+                                compression. <strong>Lossless</strong> compression, on the other hand,
+                                does not degrade the image quality, but it also does not compress the file 
+                                size as much as lossy compression.
+
+                            </p>
+                
+                        <h4>Reducing Dimensions</h4>
+                            <p> Images should be cropped to fit the spaces in a given web page. Most 
+                                webpages comfortably fit a 600-pixel wide image.</p>
+
+ 
+                        <h4>Correct File Format</h4>
+                            <ul>
+                                <li>Online images are usually in <strong>.JPG</strong> (also <strong>.JPEG</strong>) 
+                                    format. JPEG stands for Joint Photographic Experts Group. It is a commonly used 
+                                    lossy form of compression, which came about in 1992.</li>
+                                <li>Logos and icons are typically in <strong>.GIF</strong> format, which stands for 
+                                    Graphics Interchange Format, a bitmap image developed in the '80s.</li> 
+                                <li>Graphics, or designs on some surface, are usually in 24-bit <strong>.PNG</strong> format, which 
+                                    stands for Portable Network Graphics, a format which supports lossless compression. 
+                                </li>
+                            </ul>
+                        
+                        <h4>Reducing the Resolution</h4>
+                            <p> How a picture shows up on a monitor is decided by the monitor's pixel-per-inch (ppi) support.
+                                Modern monitors support 300+ ppi, but because of variation, it is best to provide multiple image
+                                sizes.   
+                            </p>
+                        
+                            <h4>Color Modes</h4>
+                            <p> The main color modes are: JPG, WebP, PNG, SVG, and GIF.      
+                            </p>
+                    <h3>Favicons</h3>
+                            <p>Favicons, also known as touch icons, are a quick way to identify a browser tab.
+                                Favicons can be saved as .GIF, .PNG, .ICO, and .SVG files. 
+                                To create a favicon, all that is needed is a symbol, which is modified to fit
+                                different browsers. A favicon is a square, so it is best to come up with a symbol
+                                that firs well witin a square and is readable. The favicon for this website, for example,
+                                is a terminal with a ">" prompt and a made up command "l".
+                            </p>
+
+                            <p>Favicons can be used to appear not only on browsers tabs, but also on a smartwatch, 
+                                a cellphone, or even in engine search results. Because of all of these formats, 
+                                a generator tool can produce appropriate formats for say Chrome on an Android device 
+                                or Chrome on a personal computer. 
+                            </p>
+
                 </article>
 
         </section>
