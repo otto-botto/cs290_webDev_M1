@@ -1,0 +1,290 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  @import 'node_modules/modern-normalize/modern-normalize.css';
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+  
+  
+/* ----- Variables  -----  */
+
+:root {
+  --forest-green:#0d360d;
+  --sage-green: #a7b288;
+  --transparent-sage-green: #a7b288aa;
+  --less-transp-sage-green: #a7b288dd;
+  --forest-brown: #5d5a47;
+  --transparent-brown: #5d5a47aa;
+  --less-transp-brown: #5d5a47cc;
+  --visited-red: #4d1727;
+  --blue-link: #033e9f;
+  --green-active-link: #729551;
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       
+  background-color: var(--sage-green); /*--sage-green: #a7b288*/
+  background-image:url("images/redwood-tree-background.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top right;
+  
+
+  font-family: 'Open Sans', sans-serif; /* Define with at least one font name and its related generic family name.*/
+  font-size: 1em;
+  color: var(--forest-green); /* forestGreen */
+  
+  line-height: 1.2;
+  margin: 0 auto;
+  max-width:80%;
+  padding:0.1%; /* better to leave blank for now, looks OK */
+}
+
+/*  ----- Page layout blocks -----  */
+header{
+  background-color: var(--transparent-brown); /* transparent-brown #5d5a47aa*/
+  border: 1px solid var(--forest-brown); /* forestBrown */
+  border-radius:  5px 5px 0 0 ;
+  font-weight: bold;
+  line-height: 0.5;
+  margin: 1% auto;
+  padding: 1%; 
+}
+footer{
+  background-color: var(--transparent-brown); /* transparent-brown #5d5a47aa */
+  border: 1px solid var(--forest-brown); /* forestBrown */
+  border-radius: 0 0 5px 5px;
+  
+  line-height: 0.5;
+  color: var(--sage-green); /*--sage-green: #a7b288*/
+  font-weight: bold;
+  margin: 1% auto;
+  padding: 1%; 
+}
+
+main {
+  margin: 0.5% auto;
+  padding: 1% 2%;
+  background-color: var(--transparent-sage-green); /* transparent-sage-green: #a7b288aa */
+  color: #537dc0;
+}
+
+section {
+  margin: 1% auto;
+  padding: 2% 4%;
+  background-color: var(--less-transp-sage-green); /* less-transparent-sage-green: #a7b288dd */
+  color: var(--forest-green); /* forestGreen */
+}
+article {
+  border-top: 2px solid var(--forest-brown); /* forestBrown */
+  margin: 1% auto;
+}
+  #webServers {}
+  #frontendDesign {}
+  #optimizingImages {}
+
+
+div {}
+aside {}
+
+
+/* ----- Anchors ----- Text links */
+a {}
+a:link {
+  color: var(--blue-link); 
+  text-decoration: underline;
+} /* blue */
+a:hover {
+  color:var(--transparent-brown);
+  background-color: var(--transparent-sage-green); 
+} /* cursor change */
+a:active {
+  color: var(--green-active-link);
+} /* red, cursor change */
+a:visited {
+  color: var(--visited-red);
+}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+  text-align: center;
+}
+nav a {
+  background-color: #5d5a47dd;
+  border: 2px solid #5d5a47dd;
+  border-radius: 5px 5px 5px 5px;
+  color: #B8BFBA;
+  font-size: 1.15em;
+  font-weight: bold;
+  line-height: 1;
+  margin-right: 3px;
+  padding: 3px, 20px, 5px, 20px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+nav a:hover {
+  background-color: #a7b288dd; /* sageGreen */
+  border: 2px solid #a7b288dd; /* sageGreen */
+  border-radius: 5px 5px 0 0;
+  color: #0d360d; /* forestGreen */
+  
+}
+
+/*  -----  Typography  ----- */
+p {}
+br {}
+dd, ol, ul, li {
+  margin-bottom: 5px; 
+}
+
+dt{
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-style: normal ;
+} 
+h1 {
+  background-color: var(--less-transp-brown); /* --less-transp-brown: #5d5a47cc; */
+  border: 1px solid #5d5a47; /* forestBrown */
+  border-radius: 5px 5px 0 0;
+  line-height: 1.5;
+}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}
+strong {}
+sub {}
+sup {}
+time {}
+
+/*  ----- Coding or instructional typography ----- */
+pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {}
+
+/*  ----- Table ----- */
+table {}
+caption {}
+thead {}
+tbody {}
+tfoot {}
+tr {}
+  tr:nth-child(even) {}
+th {}
+td {}
+  td:nth-child(1) {}
+colgroup {}
+data {}
+datalist {}
+
+
+/*  ----- Form ----- */
+form {}
+fieldset {}
+  legend {}
+label {}
+button {}
+input {}
+select {}
+  optgroup {}
+  option {}
+textarea {}
+output {}
+meter {}
+progress {}
+
+
+/* ----- Media ----- */
+
+figure{}
+  figcaption{}
+  img {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+	margin:0; 
+  padding:0;
+}
+
+.gallery figure {
+  width: 275px;
+  margin:0.5%;
+  padding:0.5%;
+}
+.gallery figcaption {
+  display:block; 
+  padding: 1% 1% 2% 1%;
+}
+
+.gallery img  {
+  width:100%;
+  margin:0;
+  padding:0;
+}
+
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {}
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
+
+
