@@ -5,6 +5,7 @@
 /*   ----- Imports  -----  */
   @import 'node_modules/modern-normalize/modern-normalize.css';
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
   
   
 /* ----- Variables  -----  */
@@ -33,6 +34,8 @@ body {
   
 
   font-family: 'Open Sans', sans-serif; 
+ 
+
   font-size: 1em;
   color: var(--forest-green); 
   
@@ -65,7 +68,7 @@ footer{
 }
 
 main {
-  margin: 0.5% auto;
+  margin: 1% auto;
   padding: 1% 2%;
   background-color: var(--transparent-sage-green); 
   color: var(--forest-green);
@@ -92,6 +95,7 @@ aside {}
 
 /* ----- Anchors ----- Text links */
 a {}
+
 a:link {
   color: var(--blue-link); 
   text-decoration: underline;
@@ -108,28 +112,47 @@ a:visited {
 }
 
 /*  ----- Navigation ----- Override text links for navigation only.  */
+
+/* need another set of rules for A CLASS:LOCAL */
 nav {
   text-align: center;
 }
-nav a {
-  background-color: var(--less-transp-brown);
-  border: 2px solid var(--less-transp-brown);
-  border-radius: 5px 5px 5px 5px;
-  color: var(--forest-green);
-  font-size: 1.15em;
-  font-weight: bold;
-  line-height: 1;
-  margin-right: 3px;
-  padding: 3px, 20px, 5px, 20px;
-  text-decoration: none;
-  vertical-align: middle;
-}
+
 nav a:hover {
   background-color: var(--less-transp-sage-green); /* sageGreen */
   border: 2px solid var(--less-transp-sage-green); /* sageGreen */
   border-radius: 5px 5px 0 0;
   color: var(--forest-green); /* forestGreen */
   
+}
+
+a.global{
+  background-color: var(--less-transp-brown);
+  border-color: var(--less-transp-brown);
+  border-radius: 5px 5px 0 0;
+  color: var(--forest-green);
+  font-size: 1.15em;
+  font-weight: bold;
+  line-height: 1;
+  margin-right: 3px;
+  margin-bottom: 2px;
+  padding: 3px 20px 5px 20px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+a.local{
+  background-color: var(--forest-green);
+  border-color: var(--forest-green);
+  border-radius: 5px 5px 0 0;
+  color: var(--sage-green);
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-right: 3px;
+  padding: 3px 20px 5px 20px;
+  text-decoration: none;
+   vertical-align: middle;
 }
 
 /*  -----  Typography  ----- */
@@ -144,10 +167,11 @@ dt{
   font-weight: bold;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif;
+h1, h2, h3 {
+  font-family: 'Lora', serif;
   font-weight: 600;
-  font-style: normal ;
+  font-style: italic;
+  font-size: 1.5em;
 } 
 h1 {
   background-color: var(--less-transp-brown); /* --less-transp-brown: #5d5a47cc; */
@@ -203,19 +227,90 @@ datalist {}
 
 
 /*  ----- Form ----- */
-form {}
-fieldset {}
-  legend {}
-label {}
-button {}
-input {}
-select {}
+form , button, input, select, textarea{
+  font-family: 'Open Sans', sans-serif; 
+}
+fieldset {
+  border: 2px solid var(--transparent-brown);
+}
+  legend {
+    font-size: larger;
+    font-weight: bolder;
+  }
+label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 90%;
+  margin-top:1%;
+  display: -ms-grid;
+}
+
+label.required:before{
+  content:"*";
+  color: var(--visited-red);
+}
+
+
+button {
+  padding: 1%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 105%;
+}
+
+button:hover{
+  color: var(--sage-green);
+  background-color: var(--forest-green);
+  border-radius: 5px 5px 5px 5px;
+  border: 2px solid var(--less-transp-sage-green);
+  font-weight: bolder;
+}
+
+input {
+  padding: 1%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 105%;
+}
+
+input:focus{
+  background-color: lightgoldenrodyellow;
+}
+
+input:invalid{
+  color: rgb(255, 0, 0);
+}
+
+input:valid{
+  color: var(--forest-green);
+}
+
+
+input::placeholder{
+  color: rgb(49, 48, 48);
+}
+
+
+select {  
+  font-size: 105%;
+}
   optgroup {}
   option {}
-textarea {}
+textarea {
+  padding: 1%;
+}
+textarea:focus{
+  background-color: lightgoldenrodyellow;
+}
+textarea::placeholder{
+  color: rgb(49, 48, 48);
+}
+
+textarea:invalid{
+  color: red;
+}
 output {}
 meter {}
 progress {}
+
+
 
 
 /* ----- Media ----- */
