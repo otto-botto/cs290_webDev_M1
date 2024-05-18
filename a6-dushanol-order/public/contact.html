@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lora Dushanova</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="robots" content="noindex,noarchive, nofollow" />
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png"> 
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <header> 
+        <img src="android-chrome-192x192.png" alt="Lora Dushanova" /> 
+        <h1>Lora Dushanova</h1> 
+    </header>
+
+    <nav class= "global">  
+        <a class="global" href="index.html">Home</a>
+        <a class="global" href="gallery.html">Gallery</a>
+        <a class="global" href="contact.html">Contact</a>
+        <a class="global" href="order.html">Order</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Request a Racquet Stringing</h2>
+            <p>Racquet stringing is $40.0, including the strings, and takes 3 business days. </p>
+                <p>To request a stringing, please provide the following information (* fields are  required):</p>
+                <form action="/review" method="POST">
+                    <fieldset>
+                        <legend>Where can we reach you:</legend>
+                        <span style="font-weight: bold">Name</span>
+                        <p>
+                            <!--1. <input> for name, of type text. 
+                                Necessary attributes include name="" and the "required" attribute. -->
+                            <label for="name" class="required">First and Last Name</label>
+                            
+                            <input 
+                                id="name"
+                                type="text"
+                                name ="name" 
+                                minlength="2" 
+                                maxlength="100" 
+                                size="20"  
+                                required=""
+                                placeholder="Jane Smith"
+                                aria-required="true"
+                                autofocus
+                            >
+                        </p>
+
+                        <span style="font-weight: bold" tabindex="0">Return Address</span>
+                        <span><small>(we only ship to the 48 contiguous states and District of Columbia)</small></span>
+                        
+                        
+                        <p>
+                            <label for="street" class ="required"></label>
+                            <input 
+                                id="street"
+                                type="text"
+                                name ="street"
+                                minlength="1" 
+                                maxlength="100" 
+                                size="20"  
+                                required=""
+                                placeholder="Street"
+                            >
+
+                            <label for="number" class ="required"></label>
+                            <input 
+                                id="number"
+                                type="text"
+                                name ="number" 
+                                placeholder="number"
+                                min="0" 
+                                max="10000" 
+                                size="10"  
+                                required=""
+                            >
+                            <!-- <label for="apt"></label>
+                            <input 
+                                id="apt"
+                                type="text"
+                                name ="apt" 
+                                placeholder="Apt, Unit..."
+                                min="0" 
+                                max="10000" 
+                                size="10" 
+                            > -->
+                        </p>
+
+                        <p>
+                            <label for="city" class ="required"></label>
+                            <input 
+                                id="city"
+                                type="text"
+                                name ="city" 
+                                placeholder="City"
+                                min="0" 
+                                max="10000" 
+                                size="20"  
+                                required=""
+                            >
+
+                            <label for="state" class ="required"></label>
+                                <select id="state" name="state" required>
+                                    <option value="Alabama" selected="">Alabama</option>
+                                    <option value="Arizona">Arizona</option>
+                                    <option value="Arkansas">Arkansas</option>
+                                    <option value="California">California</option>
+                                    <option value="Colorado">Colorado</option>
+                                    <option value="Connecticut">Connecticut</option>
+                                    <option value="Delaware">Delaware</option>
+                                    <option value="District of Columbia">District of Columbia</option>
+                                    <option value="Florida">Florida</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Idaho">Idaho</option>
+                                    <option value="Illinois">Illinois</option>
+                                    <option value="Indiana">Indiana</option>
+                                    <option value="Iowa">Iowa</option>
+                                    <option value="Kansas">Kansas</option>
+                                    <option value="Kentucky">Kentucky</option>
+                                    <option value="Louisiana">Louisiana</option>
+                                    <option value="Maine">Maine</option>
+                                    <option value="Maryland">Maryland</option>
+                                    <option value="Massachusetts">Massachusetts</option>
+                                    <option value="Michigan">Michigan</option>
+                                    <option value="Minnesota">Minnesota</option>
+                                    <option value="Mississippi">Mississippi</option>
+                                    <option value="Missouri">Missouri</option>
+                                    <option value="Nebraska">Nebraska</option>
+                                    <option value="Nevada">Nevada</option>
+                                    <option value="New Hampshire">New Hampshire</option>
+                                    <option value="New Jersey">New Jersey</option>
+                                    <option value="New Mexico">New Mexico</option>
+                                    <option value="New York">New York</option>
+                                    <option value="North Carolina">North Carolina</option>
+                                    <option value="North Dakota">North Dakota</option>
+                                    <option value="Ohio">Ohio</option>
+                                    <option value="Oklahoma">Oklahoma</option>
+                                    <option value="Oregon">Oregon</option>
+                                    <option value="Pennsylvania">Pennsylvania</option>
+                                    <option value="Rhode Island">Rhode Island</option>
+                                    <option value="South Carolina">South Carolina</option>
+                                    <option value="South Dakota">South Dakota</option>
+                                    <option value="Tennessee">Tennessee</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="Utah">Utah</option>
+                                    <option value="Vermont">Vermont</option>
+                                    <option value="Virginia">Virginia</option>
+                                    <option value="Washington">Washington</option>
+                                    <option value="West Virginia">West Virginia</option>
+                                    <option value="Wisconsin">Wisconsin</option>
+                                    <option value="Wyoming">Wyoming</option>
+                                    
+                                </select>
+
+                            <label for="postalcode" class ="required"></label>
+                            <input 
+                                id="postalcode"
+                                type="text"
+                                name ="postalcode" 
+                                placeholder="Postal code"
+                                pattern="[0-9]{5}" 
+                                size="10"  
+                                required
+                            >
+
+                        </p>
+
+                        <span style="font-weight: bold" tabindex="0">Phone Number and Email</span>
+                        <p>
+                            <label for="phone" class ="required"></label>
+                            <input 
+                            id="phone" 
+                            type="tel"
+                            name ="phone" 
+                            placeholder="123-456-7890"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                            size = "15"
+                            required    
+                            >
+
+                            <!-- 2. <input> for email, of type email. 
+                                Necessary attributes include name="" and the "required" attribute. -->
+                            <label for="email" class ="required"></label>
+                            <input 
+                            id="email" 
+                            type="email"
+                            name ="email" 
+                            minlength="3" maxlength="250" 
+                            pattern="[^ @]+@[^ @]+.[a-z]+"
+                            size = "25"
+                            required=""
+                            placeholder="email@example.com"
+                            aria-required="true"
+                            >
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend tabindex="0">Tell us about your racquet:</legend>
+                        <p>
+                            <!-- 4. <select> with <option>s of your choice. 
+                                Necessary attributes include name="" and value="". -->
+                            <label for="racquet"></label>
+                            <select id="racquet" name="brand">
+                                <option value = "Select Racquet Brand" selected="">Select Racquet Brand</option>
+                                <option value="Babolat">Babolat</option>
+                                <option value="Dunlop">Dunlop</option>
+                                <option value="Head">Head</option>
+                                <option value="Prince">Prince</option>
+                                <option value="Volkl">Volkl</option>
+                                <option value="Wilson">Wilson</option>
+                                <option value="Yonex">Yonex</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </p>
+                            <!-- 6. <input> group of type checkbox, with options of your choice. 
+                                Necessary attributes include name="" and value="".  -->
+                        <span style="font-weight:bold" tabindex="0">Select Strings (if more than one is selected, we'll combine in crosses and mains):</span>
+                           <p>
+                           
+                            <input id="nopref" name="strings" type="checkbox" value="No Preference"checked />
+                            <label for="nopref">No Preference</label>
+                            <br>
+                            
+                            <input id="multifil" name="strings" type="checkbox" value="Multifilament" />
+                            <label for="multifil">Multifilament</label>
+                            <br>
+                            
+                            <input id="poly" name="strings" type="checkbox" value = "Polyester"/>
+                            <label for="poly">Polyester</label>
+                            </p>
+
+
+                            
+                        <span style="font-weight: bold" tabindex="0">Tension: </span>
+
+                          <label for="mains" class ="required" tabindex="0">Mains (10-100 lbs)</label>
+                                <input 
+                                type="number"
+                                id="mains"
+                                placeholder="50"
+                                name="mains"
+                                size="5"
+                                step="1"
+                                min="10"
+                                max="100"
+                                required
+                                />
+                            
+                            <label for="crosses" class ="required" tabindex="0">Crosses (10-100 lbs)</label>
+                            <input 
+                            type="number"
+                            placeholder="50"
+                            min="10"
+                            max="100"
+                            name="crosses"
+                            size="5"
+                            step="1"
+                            required
+                            id="mains"
+                            />
+
+                            <br>
+                            <br>
+                            
+                        
+                        <span style="font-weight: bold" tabindex="0">Injuries: </span>    
+
+                            <p>
+                                <!-- 3. <textarea> for a message. 
+                                    Necessary attributes include name="" and the "required" attribute. -->
+                                <label for="notes" class = "required"></label>
+                                <textarea 
+                                id="notes" 
+                                name ="notes"
+                                rows="5"
+                                cols="30" 
+                                minlength="2" 
+                                maxlength="250"
+                                required
+                                aria-required="true"
+                                placeholder="Injury description [2-250] characters"></textarea>
+                            </p>
+
+                        
+                            <!-- 5. <input> group of type radio, with options of your choice. 
+                                Necessary attributes include name="" and value="". -->
+                        <p>Expedite stringing (shipped/delivered next business day)?</p>
+                            <input type="radio" id="yesexpedite"  name="expedite" value="Yes">
+                            <label for="yesexpedite">Yes (surcharge $30.0)</label>
+                           
+                            <input type="radio" id="noexpedite"  name="expedite" value="No">
+                            <label for="noexpedite">No</label>
+                        
+                        <br>
+                        <br>
+                        <!-- 7. <button> for submitting the form. -->
+                        <button type="submit" tabindex="0">Submit Request</button>
+
+                    </fieldset>
+                </form>
+
+        </section>
+    </main>
+    <footer>
+        <p> &copy 2024 Lora Dushanova</p>
+    </footer>
+</body>
+</html>

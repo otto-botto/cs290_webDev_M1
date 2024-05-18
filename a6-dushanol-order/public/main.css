@@ -1,0 +1,471 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  @import 'node_modules/modern-normalize/modern-normalize.css';
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+  
+  
+/* ----- Variables  -----  */
+
+:root {
+  --forest-green:#0d360d;
+  --sage-green: #a7b288;
+  --transparent-sage-green: #a7b288aa;
+  --less-transp-sage-green: #a7b288dd;
+  --forest-brown: #5d5a47;
+  --transparent-brown: #5d5a47aa;
+  --less-transp-brown: #5d5a47cc;
+  --visited-red: #4d1727;
+  --blue-link: #033e9f;
+  --green-active-link: #729551;
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       
+  background-color: var(--sage-green); /*--sage-green: #a7b288*/
+  background-image:url("images/redwood-tree-background.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top right;
+  
+
+  font-family: 'Open Sans', sans-serif; 
+ 
+
+  font-size: 1em;
+  color: var(--forest-green); 
+  
+  line-height: 1.2;
+  margin: 0 auto;
+  max-width:80%;
+  padding:0.1%; /* better to leave blank for now, looks OK */
+}
+
+/*  ----- Page layout blocks -----  */
+header{
+  background-color: var(--transparent-brown);
+  border: 1px solid var(--forest-brown); 
+  border-radius:  5px 5px 0 0 ;
+  font-weight: bold;
+  line-height: 0.5;
+  margin: 1% auto;
+  padding: 1%; 
+}
+footer{
+  background-color: var(--transparent-brown);
+  border: 1px solid var(--forest-brown); 
+  border-radius: 0 0 5px 5px;
+  
+  line-height: 0.5;
+  color: var(--sage-green); 
+  font-weight: bold;
+  margin: 1% auto;
+  padding: 1%; 
+}
+
+main {
+  margin: 1% auto;
+  padding: 1% 2%;
+  background-color: var(--transparent-sage-green); 
+  color: var(--forest-green);
+}
+
+section {
+  margin: 1% auto;
+  padding: 2% 4%;
+  background-color: var(--less-transp-sage-green); 
+  color: var(--forest-green); 
+}
+article {
+  border-top: 2px solid var(--forest-brown); 
+  margin: 1% auto;
+}
+
+div {}
+aside {}
+
+
+/* ----- Anchors ----- Text links */
+a {}
+
+a:link {
+  color: var(--blue-link); 
+  text-decoration: underline;
+} /* blue */
+a:hover {
+  color:var(--transparent-brown);
+  background-color: var(--transparent-sage-green); 
+} /* cursor change */
+a:active {
+  color: var(--green-active-link);
+} /* red, cursor change */
+a:visited {
+  color: var(--visited-red);
+}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+
+/* need another set of rules for A CLASS:LOCAL */
+nav {
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: var(--less-transp-sage-green); /* sageGreen */
+  border: 2px solid var(--less-transp-sage-green); /* sageGreen */
+  border-radius: 5px 5px 0 0;
+  color: var(--forest-green); /* forestGreen */
+  
+}
+
+a.global{
+  background-color: var(--less-transp-brown);
+  border-color: var(--less-transp-brown);
+  border-radius: 5px 5px 0 0;
+  color: var(--forest-green);
+  font-size: 1.15em;
+  font-weight: bold;
+  line-height: 1;
+  margin-right: 3px;
+  margin-bottom: 2px;
+  padding: 3px 20px 5px 20px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+a.local{
+  background-color: var(--forest-green);
+  border-color: var(--forest-green);
+  border-radius: 5px 5px 0 0;
+  color: var(--sage-green);
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-right: 3px;
+  padding: 3px 20px 5px 20px;
+  text-decoration: none;
+   vertical-align: middle;
+}
+
+/*  -----  Typography  ----- */
+p {}
+br {}
+dd, ol, ul, li {
+  margin-bottom: 5px; 
+}
+
+dt{
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+h1, h2, h3 {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.5em;
+} 
+h1 {
+  background-color: var(--less-transp-brown); /* --less-transp-brown: #5d5a47cc; */
+  border: 1px solid var(--forest-brown); /* forestBrown */
+  border-radius: 5px 5px 0 0;
+  line-height: 1.5;
+}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}
+strong {}
+sub {}
+sup {}
+time {}
+
+/*  ----- Coding or instructional typography ----- */
+pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {}
+
+/*  ----- Table ----- */
+table {
+  border-collapse: collapse;
+  width: 70%;
+  max-width: 80%;
+  margin: 0 auto;
+}
+caption {
+  border: 1px solid var(--forest-green);
+  color: var(--forest-brown);
+  font-weight: bolder;
+  padding: 1% 0;
+
+  }
+thead {}
+tbody {}
+tfoot {}
+tr {border-bottom: 1px solid var(--forest-green)}
+  tr:nth-child(even) {}
+th {border-bottom: 1px solid var(--forest-green)}
+td {
+  border-bottom: 1px solid var(--forest-green);
+  padding: 1%;
+  
+}
+  td:nth-child(3) {text-align: right;}
+colgroup {}
+data {}
+datalist {}
+
+
+/*  ----- Form ----- */
+form , legend, label, button, input, select, textarea{
+  font-family: 'Open Sans', sans-serif; 
+}
+fieldset {
+  border: 2px solid var(--transparent-brown);
+  margin-top: 0.5%;
+  padding: 1%;
+}
+
+legend {
+    font-size: larger;
+    font-weight: bolder;
+  }
+
+label {
+  display: -moz-box;
+  margin-top:1%;
+  font-size: 90%;
+}
+
+label.required:after{
+  content:"*";
+  color: var(--visited-red);
+}
+
+button, input, select, textarea{
+  font-size: 105%;
+  padding: 1%;
+}
+
+button {
+  border: 2px solid var(--forest-green);
+  border-radius: 5px;
+  background-color:var(--less-transp-sage-green);
+}
+
+button:hover{
+  color: var(--sage-green);
+  background-color: var(--forest-green);
+  border-radius: 5px;
+  border: 2px solid var(--sage-green);
+  font-weight: bolder;
+}
+
+input [type="text"],
+input[type = "number"],
+input[type = "email"],
+input[type = "tel"],
+textarea{
+  font-size: 110%;
+}
+
+textarea{
+  height: 100px;
+}
+
+input:focus{
+  background-color: lightgoldenrodyellow;
+}
+
+input:invalid{
+  color: rgb(255, 0, 0);
+}
+
+input:valid{
+  color: var(--forest-green);
+}
+
+
+input::placeholder{
+  color: rgb(49, 48, 48);
+}
+
+
+select {  
+  font-size: 105%;
+  font-family: 'Open Sans', sans-serif;
+}
+  optgroup {}
+  option {}
+textarea {
+  padding: 1%;
+}
+textarea:focus{
+  background-color: lightgoldenrodyellow;
+}
+textarea::placeholder{
+  color: rgb(49, 48, 48);
+}
+
+textarea:invalid{
+  color: red;
+}
+output {}
+meter {}
+progress {}
+
+input[type=checkbox]:checked + label{
+  color: var(--visited-red);
+}
+
+
+/* _____STAR_____ */
+
+#star_rating svg {
+	width: 0.75em;
+	height: 0.75em;
+	fill: var(--forest-green);
+	stroke: red;
+}
+#star_rating label, #star_rating output {
+	display: block;
+	float: left;
+	font-size: 1em;
+	height: 1.2em;
+	color: var(--forest-green);
+	cursor: pointer;
+	/* Transparent border-bottom avoids jumping
+	   when a colored border is applied
+		 on :hover/:focus */
+	border-bottom: 2px solid transparent;
+  padding: 1%
+  
+}
+#star_rating output {
+	font-size: 1.5em;
+	padding: 0 1em;
+}
+#star_rating input:checked ~ label {
+	color: #999;
+}
+#star_rating input:checked + label {
+	color: var(--visited-red);
+	border-bottom-color: #036;
+}
+#star_rating input:focus + label {
+	border-bottom-style: dotted;
+}
+#star_rating:hover input + label {
+	color: #036;
+}
+#star_rating input:hover ~ label,
+#star_rating input:focus ~ label,
+#star_rating input[id="star0"] + label {
+	color: #999;
+}
+#star_rating input:hover + label,
+#star_rating input:focus + label {
+	color: #036;
+}
+#star_rating input[id="star0"]:checked + label {
+	color: #ff2d21;
+}
+#star_rating [type="submit"] {
+	float: none;
+}
+
+
+
+
+
+/* ----- Media ----- */
+
+figure{}
+  figcaption{}
+  img {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+	margin:0; 
+  padding:0;
+}
+
+.gallery figure {
+  width: 275px;
+  margin:0.5%;
+  padding:0.5%;
+}
+.gallery figcaption {
+  display:block; 
+  padding: 1% 1% 2% 1%;
+}
+
+.gallery img  {
+  width:100%;
+  margin:0;
+  padding:0;
+}
+
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {}
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
+
+

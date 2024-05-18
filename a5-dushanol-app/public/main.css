@@ -84,10 +84,6 @@ article {
   border-top: 2px solid var(--forest-brown); 
   margin: 1% auto;
 }
-  #webServers {}
-  #frontendDesign {}
-  #optimizingImages {}
-
 
 div {}
 aside {}
@@ -227,47 +223,60 @@ datalist {}
 
 
 /*  ----- Form ----- */
-form , button, input, select, textarea{
+form , legend, label, button, input, select, textarea{
   font-family: 'Open Sans', sans-serif; 
 }
 fieldset {
   border: 2px solid var(--transparent-brown);
+  margin-top: 0.5%;
+  padding: 1%;
 }
-  legend {
+
+legend {
     font-size: larger;
     font-weight: bolder;
   }
+
 label {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 90%;
+  display: -moz-grid-group;
   margin-top:1%;
-  display: -ms-grid;
+  font-size: 90%;
 }
 
-label.required:before{
+label.required:after{
   content:"*";
   color: var(--visited-red);
 }
 
+button, input, select, textarea{
+  font-size: 105%;
+  padding: 1%;
+}
 
 button {
-  padding: 1%;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 105%;
+  border: 2px solid var(--forest-green);
+  border-radius: 5px;
+  background-color:var(--less-transp-sage-green);
 }
 
 button:hover{
   color: var(--sage-green);
   background-color: var(--forest-green);
-  border-radius: 5px 5px 5px 5px;
-  border: 2px solid var(--less-transp-sage-green);
+  border-radius: 5px;
+  border: 2px solid var(--sage-green);
   font-weight: bolder;
 }
 
-input {
-  padding: 1%;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 105%;
+input [type="text"],
+input[type = "number"],
+input[type = "email"],
+input[type = "tel"],
+textarea{
+  font-size: 110%;
+}
+
+textarea{
+  height: 100px;
 }
 
 input:focus{
@@ -290,6 +299,7 @@ input::placeholder{
 
 select {  
   font-size: 105%;
+  font-family: 'Open Sans', sans-serif;
 }
   optgroup {}
   option {}
@@ -309,6 +319,67 @@ textarea:invalid{
 output {}
 meter {}
 progress {}
+
+input[type=checkbox]:checked + label{
+  color: var(--visited-red);
+}
+
+
+/* _____STAR_____ */
+
+#star_rating svg {
+	width: 0.75em;
+	height: 0.75em;
+	fill: var(--forest-green);
+	stroke: red;
+}
+#star_rating label, #star_rating output {
+	display: block;
+	float: left;
+	font-size: 1em;
+	height: 1.2em;
+	color: var(--forest-green);
+	cursor: pointer;
+	/* Transparent border-bottom avoids jumping
+	   when a colored border is applied
+		 on :hover/:focus */
+	border-bottom: 2px solid transparent;
+  padding: 1%
+  
+}
+#star_rating output {
+	font-size: 1.5em;
+	padding: 0 1em;
+}
+#star_rating input:checked ~ label {
+	color: #999;
+}
+#star_rating input:checked + label {
+	color: var(--visited-red);
+	border-bottom-color: #036;
+}
+#star_rating input:focus + label {
+	border-bottom-style: dotted;
+}
+#star_rating:hover input + label {
+	color: #036;
+}
+#star_rating input:hover ~ label,
+#star_rating input:focus ~ label,
+#star_rating input[id="star0"] + label {
+	color: #999;
+}
+#star_rating input:hover + label,
+#star_rating input:focus + label {
+	color: #036;
+}
+#star_rating input[id="star0"]:checked + label {
+	color: #ff2d21;
+}
+#star_rating [type="submit"] {
+	float: none;
+}
+
 
 
 

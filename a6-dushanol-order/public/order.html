@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lora Dushanova</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="robots" content="noindex,noarchive, nofollow" />
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png"> 
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <header> 
+        <img src="android-chrome-192x192.png" alt="Lora Dushanova" /> 
+        <h1>Lora Dushanova</h1> 
+    </header>
+
+    <nav class= "global">  
+        <a class="global" href="index.html">Home</a>
+        <a class="global" href="gallery.html">Gallery</a>
+        <a class="global" href="contact.html">Contact</a>
+        <a class="global" href="order.html">Order</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Order Form</h2>
+            <p>Welcome to our pet store. We have been serving canine and feline family members for 25 years.</p>
+                <p>Below you can order items for your pet or pets (* fields are  required).</p>
+                <form action="/chosen" method="POST">
+
+                    <fieldset>
+                        <legend>Where can we ship your goodies:</legend>
+                        <span style="font-weight: bold">Name</span>
+                        <p>
+                            <label for="name" class="required">First and Last Name</label>
+                            
+                            <input 
+                                id="name"
+                                type="text"
+                                name ="name" 
+                                minlength="2" 
+                                maxlength="100" 
+                                size="20"  
+                                required=""
+                                placeholder="Jane Smith"
+                                aria-required="true"
+                                autofocus
+                            >
+                        </p>
+
+                        <span style="font-weight: bold" tabindex="0">Return Address</span>
+                        <span><small>(we only ship to the 48 contiguous states and District of Columbia)</small></span>
+                        
+                        
+                        <p>
+                            <label for="street" class ="required"></label>
+                            <input 
+                                id="street"
+                                type="text"
+                                name ="street"
+                                minlength="1" 
+                                maxlength="100" 
+                                size="20"  
+                                required=""
+                                placeholder="Street"
+                            >
+
+                            <label for="number" class ="required"></label>
+                            <input 
+                                id="number"
+                                type="text"
+                                name ="number" 
+                                placeholder="number"
+                                min="0" 
+                                max="10000" 
+                                size="10"  
+                                required=""
+                            >
+
+                        <p>
+                            <label for="city" class ="required"></label>
+                            <input 
+                                id="city"
+                                type="text"
+                                name ="city" 
+                                placeholder="City"
+                                min="0" 
+                                max="10000" 
+                                size="20"  
+                                required=""
+                            >
+
+                            <label for="state" class ="required"></label>
+                                <select id="state" name="state" required>
+                                    <option value="Alabama" selected="">Alabama</option>
+                                    <option value="Arizona">Arizona</option>
+                                    <option value="Arkansas">Arkansas</option>
+                                    <option value="California">California</option>
+                                    <option value="Colorado">Colorado</option>
+                                    <option value="Connecticut">Connecticut</option>
+                                    <option value="Delaware">Delaware</option>
+                                    <option value="District of Columbia">District of Columbia</option>
+                                    <option value="Florida">Florida</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Idaho">Idaho</option>
+                                    <option value="Illinois">Illinois</option>
+                                    <option value="Indiana">Indiana</option>
+                                    <option value="Iowa">Iowa</option>
+                                    <option value="Kansas">Kansas</option>
+                                    <option value="Kentucky">Kentucky</option>
+                                    <option value="Louisiana">Louisiana</option>
+                                    <option value="Maine">Maine</option>
+                                    <option value="Maryland">Maryland</option>
+                                    <option value="Massachusetts">Massachusetts</option>
+                                    <option value="Michigan">Michigan</option>
+                                    <option value="Minnesota">Minnesota</option>
+                                    <option value="Mississippi">Mississippi</option>
+                                    <option value="Missouri">Missouri</option>
+                                    <option value="Nebraska">Nebraska</option>
+                                    <option value="Nevada">Nevada</option>
+                                    <option value="New Hampshire">New Hampshire</option>
+                                    <option value="New Jersey">New Jersey</option>
+                                    <option value="New Mexico">New Mexico</option>
+                                    <option value="New York">New York</option>
+                                    <option value="North Carolina">North Carolina</option>
+                                    <option value="North Dakota">North Dakota</option>
+                                    <option value="Ohio">Ohio</option>
+                                    <option value="Oklahoma">Oklahoma</option>
+                                    <option value="Oregon">Oregon</option>
+                                    <option value="Pennsylvania">Pennsylvania</option>
+                                    <option value="Rhode Island">Rhode Island</option>
+                                    <option value="South Carolina">South Carolina</option>
+                                    <option value="South Dakota">South Dakota</option>
+                                    <option value="Tennessee">Tennessee</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="Utah">Utah</option>
+                                    <option value="Vermont">Vermont</option>
+                                    <option value="Virginia">Virginia</option>
+                                    <option value="Washington">Washington</option>
+                                    <option value="West Virginia">West Virginia</option>
+                                    <option value="Wisconsin">Wisconsin</option>
+                                    <option value="Wyoming">Wyoming</option>
+                                    
+                                </select>
+
+                            <label for="postalcode" class ="required"></label>
+                            <input 
+                                id="postalcode"
+                                type="text"
+                                name ="postalcode" 
+                                placeholder="Postal code"
+                                pattern="[0-9]{5}" 
+                                size="10"  
+                                required
+                            >
+
+                        </p>
+
+                        <span style="font-weight: bold" tabindex="0">Phone Number and Email</span>
+                        <p>
+                            <label for="phone" class ="required"></label>
+                            <input 
+                            id="phone" 
+                            type="tel"
+                            name ="phone" 
+                            placeholder="123-456-7890"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                            size = "15"
+                            required    
+                            >
+
+                            <label for="email" class ="required"></label>
+                            <input 
+                            id="email" 
+                            type="email"
+                            name ="email" 
+                            minlength="3" maxlength="250" 
+                            pattern="[^ @]+@[^ @]+.[a-z]+"
+                            size = "25"
+                            required=""
+                            placeholder="email@example.com"
+                            aria-required="true"
+                            >
+                        </p>
+
+                        <span style="font-weight: bold" tabindex="0">Delivery notes: </span>    
+
+                        <p>
+                            
+                            <label for="delivery" class = "required"></label>
+                            <textarea 
+                            id="delivery" 
+                            name ="delivery"
+                            rows="5"
+                            cols="30" 
+                            minlength="2" 
+                            maxlength="250"
+                            required
+                            aria-required="true"
+                            placeholder="Delivery instructions [2-250] characters"></textarea>
+                        </p>
+                        
+                    </fieldset>
+                    <fieldset>
+                        <legend tabindex="0">Goodies for sale:</legend>
+                        <p>Select <strong>one</strong> item by checking a button and don't forget to tell us the desired quantity:</p>
+                        <table>
+                            <caption>Order one of these products: </caption>
+                            <thead>
+                                <tr>
+                                    <th>Maker</th>
+                                    <th>Item</th>
+                                    <th>MSRP ($)</th>
+                                </tr>    
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>AGYM</td>
+                                    <td>
+                                        <input type="radio" id="catscratchball"  name="item" value="Spinning Cat Scratcher Ball">
+                                        <label for="catscratchball">Spinning Cat Scratcher Ball</label>
+                                    </td>
+                                    <td>$52.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Jasonwell</td>
+                                    <td>
+                                        <input type="radio" id="dogpool"  name="item" value="Foldable Dog Pool">
+                                        <label for="dogpool">Foldable Dog Pool</label>
+                                    </td>
+                                    <td>$27.25</td>
+                                </tr>
+                                <tr>
+                                    <td>Expawlorer</td>
+                                    <td>
+                                        <input type="radio" id="dogfence"  name="item" value="Dog Fence Window">
+                                        <label for="dogfence">Dog Fence Window</label>
+                                    </td>
+                                    <td>$30.50</td>
+                                </tr>
+                                <tr>
+                                    <td>Lollimeow</td>
+                                    <td>
+                                        <input type="radio" id="catbackpack"  name="item" value="Capsule Pet Travel Backpack">
+                                        <label for="catbackpack">Capsule Pet Travel Backpack</label>
+                                    </td>
+                                    <td>$59.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Drool'd</td>
+                                    <td>
+                                        <input type="radio" id="catwheel"  name="item" value="Cat Hamster Wheel">
+                                        <label for="catwheel">Cat Hamster Wheel</label>
+                                    </td>
+                                    <td>$349.75</td>
+                                </tr>
+                                <tr>
+                                    <td>Lollimeow</td>
+                                    <td>
+                                        <input type="radio" id="catsherpa"  name="item" value="Sherpa Bubble Cat Carrier Backpack">
+                                        <label for="catbackpack">Sherpa Bubble Cat Carrier Backpack</label>
+                                    </td>
+                                    <td>$79.99</td>
+                                </tr>
+                            </tbody>    
+                        </table>    
+                         
+
+
+
+                        <span style="font-weight: bold" tabindex="0">Quantity: </span>
+
+                          <label for="quantity" class ="required" tabindex="0">Choose between 1 and 100</label>
+                                <input 
+                                type="number"
+                                id="quantity"
+                                placeholder="1"
+                                name="quantity"
+                                size="5"
+                                step="1"
+                                min="1"
+                                max="100"
+                                required
+                                />
+                        
+                        <br>
+                        <br>
+                        <button type="submit" tabindex="0">Submit Order</button>
+
+                    </fieldset>
+
+
+
+                    
+                </form>
+
+        </section>
+    </main>
+    <footer>
+        <p> &copy 2024 Lora Dushanova</p>
+    </footer>
+</body>
+</html>

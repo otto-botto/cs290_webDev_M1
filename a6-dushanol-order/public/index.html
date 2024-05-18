@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lora Dushanova</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="robots" content="noindex,noarchive, nofollow" />
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png"> 
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <header> 
+        <img src="android-chrome-192x192.png" alt="Lora Dushanova" /> 
+        <h1>Lora Dushanova</h1> 
+    </header>
+
+    <nav class= "global">  
+        <a class="global" href="index.html">Home</a>
+        <a class="global" href="gallery.html">Gallery</a>
+        <a class="global" href="contact.html">Contact</a>
+        <a class="global" href="order.html">Order</a>
+    </nav>
+    
+
+   
+
+    <main>
+        <section>
+            <h2>Web Dev Concepts</h2>
+            <nav class = "local">  
+                <a class="local" href="#webServers">Web Servers</a>
+                <a class="local" href="#frontendDesign">Frontend Design</a>
+                <a class="local" href="#optimizingImages">Optimizing Images</a>
+                <a class="local" href="#websiteStyles">Website Styles</a>
+            </nav>
+
+
+                <article id="webServers">
+                    <h3>Web Servers</h3>
+                        <h4>Client</h4>
+                            <p> The starting point for this website is VS Code's HTML boilerplate.  
+                                The client used to view and test the website is Firefox on Linux.</p>
+                        <h4>Local Access</h4>
+                            <p> Accessing the website from a local computer must include the index.html 
+                                resource in order to view the homepage.
+                                Not specifying the resource "/index.html" brings up the directory of the file. 
+                                In Firefox's Inspector under Network, there is one GET request to an HTML 
+                                document; the status code is 200.
+                
+                        <h4>Server Access</h4>
+                            <p> Server access need not include the index.html resource because 
+                                the file is already the <strong>designated homepage</strong> of the web 
+                                server. This file, stored in the root directory, is fetched with a <strong>GET</strong> 
+                                request.</p>
+                                The Inspector shows a <strong>status code</strong> 200.
+                                This status code means that the request to the server to render the page in the 
+                                client was successful. The data received is the HTML (text) of the file.</p>
+                            
+                            
+                            <p> There are four GET requests; only two paths (homepage and favicon) are successful. 
+                                The other two GET requests, to the <strong>JavaScript</strong> and <strong>CSS</strong> main 
+                                files, are unsuccessful (status code 404) because these files do not exist.
+                                The favicon.ico request is successful. The response 
+                                header shows the request has been <strong>cached</strong> by the <strong>DNS</strong>. 
+                                Due to the cache, 
+                                the status code is 200, even though no such file exists in the public_html folder 
+                                on the server.</p>
+                        <h4>URL</h4>
+                            <p> The homepage URL is "https://web.engr.oregonstate.edu/~dushanol/a2-dushanol/index.html".
+                                The <strong>protocol</strong> is "HTTPS" or encrypted HTTP. There are two 
+                                <strong>subdomains</strong>, "web" and "engr". The <strong>domain</strong> is 
+                                "oregonstate.edu". The <strong>path to the resource</strong> is 
+                                "~dushanol/a1-dushanol". And finally, the <strong>resource</strong> is "index.html" 
+                                or the homepage.</p>
+                </article>
+                <article id="frontendDesign">
+                    <h3>Frontend Design</h3>
+                        <h4>What is Frontend Design</h4>
+                            <p>Frontend design focuses on the interaction with the user. Often referred to as User Interface
+                                (UI) or User Experience (UX), this field focuses on visual design which enables usability. 
+                            </p>
+                        <h4>Usability</h4>
+                            <p>A guide to reaching ultimate usability of a website consists of the following (known as
+                                the five <strong><q>E</q>s</strong>):
+                                    <dl>
+                                        <dt><em>Effective</em></dt>    
+                                        <dd>Helps users meet their goals.</dd>
+                                        <dt><em>Efficient</em></dt>
+                                        <dd>Tasks are performed in the fewest number of steps.</dd>
+                                        <dt><em>Easy to navigate</em></dt>
+                                        <dd>First-time users, especially, locate their goals quickly.</dd>
+                                        <dt><em>Error-free</em></dt>
+                                        <dd>Study and remove roadblocks for specific users.</dd>
+                                        <dt><em>Engaging</em></dt>
+                                        <dd>Meet the needs of the intended audience.</dd>
+                                      </dl>
+                            </p>
+                        <h4>Page Layout Tags</h4>
+                            <p>Page layout tags are used to section off content. Each tag usually has a content block so 
+                                that a line break comes before and after. </p>
+                                    <ul>
+                                        <li>&lt;main&gt; is the primary block that holds content.</li>
+                                        <li>&lt;body&gt; displays the contents of the browser's <strong>viewport</strong> and can 
+                                        appear only once on a page.</li>
+                                        <li>&lt;section&gt; is a thematic grouping of content with an &lt;h1&gt; heading.</li>
+                                        <li>&lt;article&gt; is a specific topic inside a &lt;section&gt; with &lt;h2&gt; heading.</li>
+                                        <li>&lt;h1&gt; through &lt;h6&gt; are <strong>hierarchical</strong> headlines, which allow screen readers and 
+                                            search engines access and use the page's structure.</li>
+                                        <li>&lt;footer&gt; is below the &lt;/main&gt; tag and contains legal and contact information.</li>
+                                    </ul>    
+                        <h4>Anchors</h4>
+                            <p>Anchors create <strong>hyperlinks</strong> from one item to another can be created using &lt;a&gt; the 
+                                anchor element. This element can hyperlink to:
+                            </p>
+                                <ol>
+                                    <li>Internal content using IDs <q>&lt;article id="Web Servers"&gt;Web Servers/article>&gt;</q>, 
+                                        which results in <a href="#webServers">Web Servers</a></li>
+                                    <li>External content using <q>&lt;a href="https://github.com/"&gt;GitHub&lt;/a&gt;</q>, which results in
+                                    <a href="https://github.com/">GitHub</a></li>
+                                    <li>Page-to-page sing &lt;nav&gt; and &lt;a&gt; before the &lt;header&gt;, which with a <a href="#websiteStyles">CSS</a> file 
+                                        creates buttons to other pages.</li>
+                                </ol>
+                </article>
+
+                <article id="optimizingImages">
+                    <h3>Optimizing Images</h3>
+                        <p> Image optimization is a common practice in web development. Optimization
+                        reduces load time for images in the browser and conserves server space.
+                        There are six main optimization specifications: descriptive file naming, 
+                        small file size, reducing dimensions, ensuring a correct file format,
+                        reducing the image resolution, and choosing an appropriate color mode.</p>
+                        
+                        <h4>Descriptive File Naming</h4>
+                            <p> Ideally, the name of the image file will include who, what, where,
+                                and when. Such titles improve search engine optimization, so search
+                                engine bots can categorize properly a given image on the web.</p>
+                        <h4>Small File Size</h4>
+                            <p> The smaller the image file size, the faster it will load. Known as 
+                                <strong>compression</strong>, removing data image via 
+                                approximations, in turn reduces the file size. Such compression, 
+                                however, may result in pixelation and is known as <strong>lossy</strong> 
+                                compression. <strong>Lossless</strong> compression, on the other hand,
+                                does not degrade the image quality, but it also does not compress the file 
+                                size as much as lossy compression.
+
+                            </p>
+                
+                        <h4>Reducing Dimensions</h4>
+                            <p> Images should be cropped to fit the spaces in a given web page. Most 
+                                webpages comfortably fit a 600-pixel wide image.</p>
+
+ 
+                        <h4>Correct File Format</h4>
+                            <ul>
+                                <li>Online images are usually in <strong>.JPG</strong> (also <strong>.JPEG</strong>) 
+                                    format. JPEG stands for Joint Photographic Experts Group. It is a commonly used 
+                                    lossy form of compression, which came about in 1992.</li>
+                                <li>Logos and icons are typically in <strong>.GIF</strong> format, which stands for 
+                                    Graphics Interchange Format, a bitmap image developed in the '80s.</li> 
+                                <li>Graphics, or designs on some surface, are typically in 24-bit <strong>.PNG</strong> format, which 
+                                    stands for Portable Network Graphics, a format which supports lossless compression. 
+                                </li>
+                            </ul>
+                        
+                        <h4>Reducing the Resolution</h4>
+                            <p> How a picture shows up on a monitor is decided by the monitor's pixel-per-inch (ppi) support.
+                                Modern monitors support 300+ ppi, but because of variation, it is best to provide multiple image
+                                sizes.   
+                            </p>
+                        
+                            <h4>Color Modes</h4>
+                            <p> The main color modes are: JPG, WebP, PNG, SVG, and GIF.      
+                            </p>
+                    <h3>Favicons</h3>
+                            <p>Favicons, also known as touch icons, are a quick way to identify a browser tab
+                                and can be saved as .GIF, .PNG, .ICO, and .SVG files. 
+                                To create a favicon, all that is needed is a symbol, which is modified to fit
+                                different browsers. A favicon is a square, so it is best to come up with a symbol
+                                that firs well within a square and is readable. The favicon for this website, for example,
+                                is a terminal with a ">" prompt and a made up command "l".
+                            </p>
+
+                            <p>Favicons can be used to appear not only on browsers tabs, but also on a smartwatch, 
+                                a cellphone, or even in engine search results. Because of all of these formats, 
+                                a generator tool can produce appropriate formats for say Chrome on an Android device 
+                                or Chrome on a personal computer. 
+                            </p>
+
+                </article>
+                
+                <article id="websiteStyles">
+                    <h3>Website Styles</h3>
+                        <h4> Cascading Style Sheet, CSS</h4>
+                            <p> A unique but readable font, text and image alignment, or a colors
+                                scheme emphasizing content rather than distracting away from it, these choices are not
+                                nitpicky semantics of a website. Style is essential to how readable and engaging a site will be.
+                                Stylesheets, usually written in a language named Cascading Style Sheets, or <strong>CSS</strong>, 
+                                significantly streamline the web design process. In CSS, style rules are applied holistically to 
+                                the HTML of the entire website. Such stylesheets prevent the excess repeating of code and streamline
+                                ease the style application.  
+                            </p>
+                        
+                        <h4>Incorporating Style</h4>
+                            <p>There are <strong>five ways</strong> to incorporate styles:</p> 
+                                <ul>
+                                    <li>External CSS rules, which are either <strong>linked</strong> or <strong>imported</strong></li>
+                                    <li>Style <strong>embedded</strong> or <strong>inline</strong> the .HTML file.</li> 
+                                    <li>Document Object Model <strong>(DOM)</strong> manipulation using <strong>JavaScript</strong>.</li>
+                                </ul> 
+                            <p>An externally linked .CSS file is advantageous, as this method is most efficient. Other methods listed, 
+                            embedding the style directly in the .HTML file or changing the DOM, are suitable for one-off changes only.
+                            </p>
+                </article>
+   
+        </section>
+    
+    </main>
+    
+    <footer>
+        <p> &copy 2024 Lora Dushanova</p>
+    </footer>
+    
+</body>
+
+</html>
