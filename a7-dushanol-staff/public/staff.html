@@ -7,7 +7,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name="robots" content="noindex,noarchive, nofollow" />
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    
+    
+
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png"> 
     <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
@@ -20,6 +22,7 @@
     <header> 
         <img src="android-chrome-192x192.png" alt="Lora Dushanova" /> 
         <h1>Lora Dushanova</h1> 
+        <p>Site for demonstraton purposes, uses Node, Express, JavaScript, HTML, and CSS.</p>
     </header>
 
     <nav class= "global">  
@@ -30,53 +33,53 @@
         <a class="global" href="staff.html">Staff</a>
     </nav>
 
+    
+
     <main>
         <section>
             <h2>Staff</h2>
             <article>
-                <aside>
-                    <h3>Server Messages</h3>
-                    <p id=""></p>
-                    <p id=""></p>
-                    <p>The <a href="https://randomuser.me/">Random User Generator</a> is a free tool 
+                <aside id="serverStatus" class="floatingAside">
+                    <h3>Server Status:</h3>
+                    <p id="worked"></p>
+                    <p id="didntWork"></p>
+                </aside>    
+                    <p id="first">The <a href="https://randomuser.me/">Random User Generator</a> is a free tool 
                         that geenrates fake user data and provides a 
                         testing environment for developers. The tool returns an object, whose default format is 
                         JSON. The developer may choose another format using the available 
                         <a href="https://randomuser.me/documentation#format">format parameters</a>. 
                     </p>
-                    <button id="button" type="submit" tabindex="0">Generate</button>
-
-                    <table>
-                        <caption>Generated Users</caption>
+                    <p id="second">If the API is down, a server status message will appear on the righthand side.</p>
+                    <p id = "third">Click the "Generate" button below a number of times to generate random staff profiles.</p>
+                    
+                    <button id="button">Generate</button>
+                    
+                    <br>
+                    <table id="table">
+                        <caption>Staff Table</caption>
                         <thead>
                             <tr>
-                                <th scope="col">Person</th>
-                                <th scope="col">Most Interested in</th>
-                                <th scope="col">Major</th>
+                                <th>Picture</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Location</th>
                             </tr>
                         </thead>
-                        <tbody id="tContent">
-                          <tr>
-                            <td>cell is row 0 column 0</td>
-                            <td>cell is row 0 column 1</td>
-                            <td>cell is row 0 column 2</td>
-                          </tr>
-                          <tr>
-                            <td>cell is row 1 column 0</td>
-                            <td>cell is row 1 column 1</td>
-                            <td>cell is row 1 column 2</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                </aside>
+                        <tbody id="tbody"></tbody>
+                    </table>
+                    
+                    
             </article>
 
         </section>
     </main>
+    
 <footer>
     <p> &copy 2024 Lora Dushanova</p>
-</footer>
-    
+</footer> 
+
+<script src='main.js'></script>
 </body>
 
 </html>    

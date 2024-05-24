@@ -1,0 +1,111 @@
+### CREATE five documents.
+
+### CREATE 1
+POST http://localhost:3000/macros HTTP/1.1
+content-type: application/json
+
+{
+    "dateMeal": "2023-12-15",
+    "meal": "snack", 
+    "calories": 175, 
+    "fat": 3.2,
+    "protein": 1.6, 
+    "fiber": 4.6, 
+    "sugar": 1.8 
+}
+
+### CREATE 2
+POST http://localhost:3000/macros HTTP/1.1
+content-type: application/json
+
+{
+    "dateMeal": "2023-12-16",
+    "meal": "breakfast", 
+    "calories": 67, 
+    "fat": 5.88,
+    "protein": 1.6, 
+    "fiber": 0, 
+    "sugar": 2.11 
+}
+
+
+### CREATE 3
+POST http://localhost:3000/macros HTTP/1.1
+content-type: application/json
+
+{
+    "dateMeal": "2023-12-17",
+    "meal": "snack", 
+    "calories": 45, 
+    "fat": 2,
+    "protein": 4, 
+    "fiber": 10, 
+    "sugar": 0 
+}
+
+### CREATE 4
+POST http://localhost:3000/macros HTTP/1.1
+content-type: application/json
+
+{
+    "dateMeal": "2023-12-17",
+    "meal": "dinner", 
+    "calories": 168, 
+    "fat": 18.4,
+    "protein": 1.6, 
+    "fiber": 1.6, 
+    "sugar": 0.8 
+}
+
+### CREATE 5
+POST http://localhost:3000/macros HTTP/1.1
+content-type: application/json
+
+{
+    "dateMeal": "2023-12-18",
+    "meal": "snack", 
+    "calories": 141, 
+    "fat": 11.66,
+    "protein": 8, 
+    "fiber": 0, 
+    "sugar": 0.17 
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/macros HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/macros/664fdc54882479238ec236d2 HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the date:
+PUT http://localhost:3000/macros/664fdc54882479238ec236d2 HTTP/1.1
+content-type: application/json
+
+{
+    "dateMeal": "2023-12-14",
+    "meal": "snack", 
+    "calories": 45, 
+    "fat": 2,
+    "protein": 4, 
+    "fiber": 10, 
+    "sugar": 0 
+    
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/macros/665001ec3f68ea494b3f4ec8 HTTP/1.1
+
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/macros HTTP/1.1
+
+

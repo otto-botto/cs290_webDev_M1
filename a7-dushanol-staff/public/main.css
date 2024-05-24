@@ -86,7 +86,14 @@ article {
 }
 
 div {}
-aside {}
+aside {
+  float:right;
+  width: 200px;
+  border: 1px solid var(--forest-brown); 
+  margin:1% auto;
+  padding:1%;
+
+}
 
 
 /* ----- Anchors ----- Text links */
@@ -253,7 +260,7 @@ legend {
   }
 
 label {
-  display: -moz-box;
+  display: block;
   margin-top:1%;
   font-size: 90%;
 }
