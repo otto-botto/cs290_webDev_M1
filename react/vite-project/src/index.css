@@ -1,0 +1,39 @@
+.card{
+  border: 1px solid hsl(0%, 0%, 80%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 10%);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 250px;
+  display: inline-block; 
+}
+
+.card .card-image{
+  max-width: 60%;
+  height: auto;
+  border-radius: 10%;
+  margin-bottom: 10px;
+}
+
+.card .card-title{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  marign: 0;
+  color: hsl(0, 0%, 20%);
+}
+
+.card .card-text{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  marign: 0;
+  color: hsl(0, 0%, 30%);
+}
+
+/* this would be using EXTERNAL CSS style sheet, not good for many buttons */
+/* .button{
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+  padding:10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+} */
